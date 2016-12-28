@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.alibaba.sdk.android.feedback.impl.FeedbackAPI;
 
 import java.util.List;
 
@@ -30,7 +29,6 @@ public class MyAdapter extends SwipeCardAdapter<MyAdapter.MyHolder> {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FeedbackAPI.openFeedbackActivity();
             }
         });
         return new MyHolder(view);

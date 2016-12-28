@@ -11,7 +11,9 @@ buildscript {
         classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
         classpath 'ch.netzwerg:gradle-release-plugin:1.2.0'
         classpath 'org.greenrobot:greendao-gradle-plugin:3.1.1'
-//        classpath "io.realm:realm-gradle-plugin:1.2.0"
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.2'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.3'
+
     }
 }
 

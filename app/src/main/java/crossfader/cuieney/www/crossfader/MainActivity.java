@@ -16,6 +16,7 @@ import android.view.animation.AccelerateInterpolator;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.feetsdk.android.FeetSdk;
 import com.nineoldandroids.animation.AnimatorSet;
 import com.nineoldandroids.animation.ObjectAnimator;
 
@@ -86,6 +87,9 @@ public class MainActivity extends AppCompatActivity {
                             }
                     }
                 });
+
+        FeetSdk.get
+
     }
 
 

@@ -31,12 +31,7 @@ public class NetWorkUtil {
         NETWORK_UNKNOWN, NETWORK_WIFI, NETWORK_3_G, NETWORK_4_G, NETWORK_2_G
     }
 
-    /**
-     * 网络是否可用
-     *
-     * @param context
-     * @return
-     */
+
     public static boolean isNetworkAvailable(Context context) {
         if (context != null) {
             ConnectivityManager connectivity = (ConnectivityManager) context
@@ -58,12 +53,7 @@ public class NetWorkUtil {
         return false;
     }
 
-    /**
-     * 判断是否有网络连接
-     *
-     * @param context
-     * @return
-     */
+
     public static boolean isNetworkConnected(Context context) {
         if (context != null) {
             ConnectivityManager mConnectivityManager = (ConnectivityManager) context
@@ -77,12 +67,7 @@ public class NetWorkUtil {
         return false;
     }
 
-    /**
-     * 判断WIFI网络是否可用
-     *
-     * @param icontext
-     * @return
-     */
+
     public static boolean isWifiConnected(Context icontext) {
         Context context = icontext.getApplicationContext();
         ConnectivityManager connectivity = (ConnectivityManager) context
@@ -102,12 +87,7 @@ public class NetWorkUtil {
         return false;
     }
 
-    /**
-     * 判断MOBILE 网络是否可用
-     *
-     * @param context
-     * @return
-     */
+
     public static boolean isMobileConnected(Context context) {
         if (context != null) {
             ConnectivityManager mConnectivityManager = (ConnectivityManager) context
@@ -121,12 +101,7 @@ public class NetWorkUtil {
         return false;
     }
 
-    /**
-     * 获取当前网络连接的类型信息
-     *
-     * @param context
-     * @return
-     */
+
     public static int getConnectedType(Context context) {
         if (context != null) {
             ConnectivityManager mConnectivityManager = (ConnectivityManager) context
@@ -140,14 +115,7 @@ public class NetWorkUtil {
         return -1;
     }
 
-    /**
-     * @return netType 返回类型
-     * @throws
-     * @方法名: getAPNType
-     * @说 明: 获取当前的网络状态 -1：没有网络 1：WIFI网络2：wap 网络3：net网络
-     * @参 数: @param context
-     * @参 数: @return
-     */
+
     public static NetType getNetworkType(Context context) {
         NetType netType = null;
         ConnectivityManager manager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
