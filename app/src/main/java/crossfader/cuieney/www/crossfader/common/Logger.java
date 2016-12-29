@@ -1,4 +1,4 @@
-package crossfader.cuieney.www.crossfader;
+package crossfader.cuieney.www.crossfader.common;
 
 import android.util.Log;
 

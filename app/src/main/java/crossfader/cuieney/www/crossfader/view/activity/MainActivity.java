@@ -1,4 +1,4 @@
-package crossfader.cuieney.www.crossfader;
+package crossfader.cuieney.www.crossfader.view.activity;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -16,7 +16,6 @@ import android.view.animation.AccelerateInterpolator;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.feetsdk.android.FeetSdk;
 import com.nineoldandroids.animation.AnimatorSet;
 import com.nineoldandroids.animation.ObjectAnimator;
 
@@ -24,6 +23,8 @@ import java.util.concurrent.TimeUnit;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import crossfader.cuieney.www.crossfader.R;
+import crossfader.cuieney.www.crossfader.rx.RxSensor;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action1;
 import rx.schedulers.Schedulers;
@@ -69,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                value1.setText(values[0] + "");
+//                                value1.setText(values[0] + "");
                                 value2.setText(values[1] + "");
                                 value3.setText(values[2] + "");
                             }
@@ -88,17 +89,16 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
-        FeetSdk.get
+
 
     }
-
 
     private float lastBigValue = 1;
     private float lastSmallValue = 1;
     AnimatorSet set = new AnimatorSet();
 
     private void scalePicture(float bigValue, float smallValue) {
-        Logger.d(lastBigValue+",,"+bigValue);
+//        Logger.d(lastBigValue+",,"+bigValue);
         if (bigValue<1.5 && bigValue > 0.5 && smallValue<1.5 && smallValue> 0.5) {
 
             if (lastBigValue != bigValue && lastSmallValue != smallValue) {

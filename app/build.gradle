@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+def butterKnifeVersion = "8.2.1"
 
 android {
     compileSdkVersion 24
@@ -10,6 +12,11 @@ android {
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
+    }
+
+//dagger2 和 butterknife冲突
+    packagingOptions {
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
     }
 
     signingConfigs {
@@ -66,17 +73,29 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:24.2.1'
+    //dagger
+    compile rootProject.ext.libDagger
+    provided rootProject.ext.libDaggerCompiler
+    //butterknife
+    compile "com.jakewharton:butterknife:$butterKnifeVersion"
+    apt "com.jakewharton:butterknife-compiler:$butterKnifeVersion"
+
     compile 'com.zhy:autolayout:1.4.5'
+    compile rootProject.ext.libSupportAppcompat
+    compile rootProject.ext.libSupportV4
+    compile rootProject.ext.libSupportCardview
+    compile rootProject.ext.libGlide
+    compile rootProject.ext.libDesign
+    compile rootProject.ext.libRxBinding
+    compile rootProject.ext.libRxBindingSupportV4
+    compile rootProject.ext.libRxBindingAppcompatV7
+    compile rootProject.ext.libRetrofit
+    compile rootProject.ext.libRetrofitConverterGson
+    compile rootProject.ext.libRetrofitAdapterRxJava
+
     compile 'io.reactivex:rxandroid:1.2.1'
     compile 'io.reactivex:rxjava:1.0.14'
-    compile 'com.jakewharton.rxbinding:rxbinding:0.4.0'
-    compile 'com.jakewharton.rxbinding:rxbinding-support-v4:0.4.0'
-    compile 'com.jakewharton.rxbinding:rxbinding-appcompat-v7:0.4.0'
-    compile 'com.jakewharton:butterknife:8.2.1'
-    compile 'com.nineoldandroids:library:2.4.0'
-    compile 'com.android.support:appcompat-v7:24.2.1'
-    compile 'com.android.support:support-v4:24.0.0'
-    compile 'com.android.support:recyclerview-v7:24.0.0-alpha1'
+    compile 'com.github.bumptech.glide:okhttp3-integration:1.4.0@aar'
+    compile 'org.greenrobot:eventbus:3.0.0'
     compile 'com.cuieneylibrary.crossfader:crossfader:0.0.1'
 }

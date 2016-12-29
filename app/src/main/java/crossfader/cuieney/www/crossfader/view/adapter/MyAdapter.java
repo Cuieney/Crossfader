@@ -1,4 +1,4 @@
-package crossfader.cuieney.www.crossfader;
+package crossfader.cuieney.www.crossfader.view.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 
 import java.util.List;
+
+import crossfader.cuieney.www.crossfader.R;
 
 /**
  * Created by xingzhu on 2016/11/15.

@@ -1,4 +1,4 @@
-package crossfader.cuieney.www.crossfader;
+package crossfader.cuieney.www.crossfader.view.adapter;
 
 import android.support.v7.widget.RecyclerView;
 

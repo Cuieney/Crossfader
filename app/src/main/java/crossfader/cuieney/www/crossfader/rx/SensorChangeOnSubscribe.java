@@ -1,4 +1,4 @@
-package crossfader.cuieney.www.crossfader;
+package crossfader.cuieney.www.crossfader.rx;
 
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;

@@ -1,4 +1,4 @@
-package crossfader.cuieney.www.crossfader.recyclerView;
+package crossfader.cuieney.www.crossfader.view.weiget.recyclerView;
 
 import android.content.Context;
 import android.graphics.Color;
